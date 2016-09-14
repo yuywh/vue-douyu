@@ -1,12 +1,31 @@
 <template>
-  <div>
-    <h1>vue-douyu</h1>
-    <p>A vue project.</p>
-  </div>
+    <div id="home">
+        <topnav></topnav>  
+        <router-view></router-view> 
+    </div>
 </template>
 
 <script>
-  export default {
-    name: 'app'
-  };
+import topnav from './components/header.vue'
+
+export default {
+    components:{
+        topnav
+    }
+}
 </script>
+
+<style lang="less">
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+}
+body{
+    background: #f2f2f2;
+}
+#home{
+    width: 100%;
+}
+</style>
