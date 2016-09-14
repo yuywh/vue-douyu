@@ -4,15 +4,32 @@
 			<img src="../assets/logo.png" alt="douyu">
 		</div>
 		<ul>
-			<li class="active">首页</li>
-			<li>分类</li>
+			<li :class="{'active':currentIndex.index}" @click="headerClick('index')">首页</li>
+			<li :class="{'active':currentIndex.classify}" @click="headerClick('classify')">分类</li>
 		</ul>
 	</div>
 </template>
 
 <script>
 	export default{
-		
+		data(){
+			return {
+				currentIndex:{
+					index:true,
+					classify:false
+				}
+			}
+		},
+		methods:{
+			headerClick(val){
+				this.currentIndex[val] = true;
+				for(let i in this.currentIndex){
+					if(i !== val){
+						this.currentIndex[i] = false;
+					}
+				}
+			}
+		}
 	}
 </script>
 
