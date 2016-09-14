@@ -1,10 +1,10 @@
 {
-  "name": "vue-douyu",
+  "name": "vue1-douyu",
   "description": "A Vue.js project",
   "author": "yuyao <yuywh@foxmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --hot",
+    "dev": "webpack-dev-server --inline --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {

@@ -46,7 +46,7 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    noInfo: false,
+    noInfo: true,
     proxy:{
       '/api':{
         target:'http://open.douyucdn.cn',
