@@ -1,35 +1,18 @@
 <template>
 	<div id="header">
 		<div class="logo">
-			<img src="../assets/logo.png" alt="douyu">
+			<img src="../../assets/logo.png" alt="douyu">
 		</div>
 		<ul>
-			<li :class="{'active':currentIndex.index}" @click="headerClick('index')">首页</li>
-			<li :class="{'active':currentIndex.classify}" @click="headerClick('classify')">分类</li>
+			<li v-link="{path:'/Home',activeClass:'nav-active'}">首页</li>
+			<li v-link="{path:'/Classify',activeClass:'nav-active'}">分类</li>
 		</ul>
 	</div>
 </template>
 
 <script>
 	export default{
-		data(){
-			return {
-				currentIndex:{
-					index:true,
-					classify:false
-				}
-			}
-		},
-		methods:{
-			headerClick(val){
-				this.currentIndex[val] = true;
-				for(let i in this.currentIndex){
-					if(i !== val){
-						this.currentIndex[i] = false;
-					}
-				}
-			}
-		}
+
 	}
 </script>
 
@@ -61,7 +44,7 @@
 			line-height: 48px;
 			text-align: center;
 		}
-		li.active{
+		li.nav-active{
 			color: #FF6501;
 			border-bottom: 2px solid #FF6501;
 		}

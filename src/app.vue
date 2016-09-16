@@ -1,12 +1,12 @@
 <template>
     <div id="home">
-        <topnav></topnav>  
-        <router-view></router-view> 
+        <topnav></topnav>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-import topnav from './components/header.vue'
+import topnav from './components/modules/header.vue'
 
 export default {
     components:{
