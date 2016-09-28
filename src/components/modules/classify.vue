@@ -29,7 +29,7 @@
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 #classify{
     display: flex;
 	flex-flow:row wrap;
