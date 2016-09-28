@@ -23,6 +23,8 @@ export default {
     font-size: 16px;
 }
 body{
+    width: 100%;
+    overflow: hidden;
     background: #f2f2f2;
 }
 #home{
