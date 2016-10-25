@@ -28,5 +28,6 @@ body{
 }
 #home{
     width: 100%;
+
 }
 </style>

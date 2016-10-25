@@ -1,11 +1,9 @@
 <template>
 <div id="container" @scroll="scrollLoad">
-	<div class="main">
-		<div class="live-box" v-for="item in gamelist">
-			<img :src="item.room_src">
-			<span class="livetype">{{item.game_name}}</span>
-			<span class="roomname">{{item.room_name}}</span>
-		</div>
+	<div class="live-box" v-for="item in gamelist">
+		<img :src="item.room_src">
+		<span class="livetype">{{item.game_name}}</span>
+		<span class="roomname">{{item.room_name}}</span>
 	</div>
 </div>
 </template>
@@ -20,9 +18,6 @@ export default {
 	},
 	created() {
 		this.init();
-	},
-	ready() {
-		document.querySelector('#container').style.height = window.innerHeight + 'px';
 	},
 	methods: {
 		init() {
@@ -47,16 +42,12 @@ export default {
 
 <style lang="less" scoped>
 #container {
-    //display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    overflow-y: scroll;
-    .main {
-        width: 100%;
-        height: auto;
-    }
+	width: 100%;
+	display: flex;
+	flex-flow:row wrap;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
     .live-box {
         float: left;
         position: relative;
